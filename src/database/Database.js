@@ -1,4 +1,6 @@
 import LokiJs from 'lokijs';
+import Network from '../lib/Network';
+
 const cryptedFileAdapter = require('../../node_modules/lokijs/src/loki-crypted-file-adapter');
 
 /**
@@ -14,14 +16,6 @@ class Database {
         this._db = value;
     }
 
-    get wallets() {
-        return this._wallets;
-    }
-
-    set wallets(value) {
-        this._wallets = value;
-    }
-
     /**
      * @param dbName
      */
@@ -29,25 +23,61 @@ class Database {
         cryptedFileAdapter.setSecret('mySecret'); // do some master password functionality
 
         this.db = new LokiJs(dbName, {
-            verbose:true,
+            env: 'BROWSER',
+            // adapter: cryptedFileAdapter,
+            verbose: true,
             autoload: true,
-            autoloadCallback : this.autoLoadCallback.bind(this),
+            autoloadCallback: this.autoLoadCallback.bind(this),
             autosave: true,
-            autosaveInterval: 1000,
-            persistenceMethod: 'fs',
-            persistenceAdapters: cryptedFileAdapter,
+            autosaveCallback: this.autoSaveCallback.bind(this),
+            autosaveInterval: 100,
+            persistenceMethod: 'localStorage',
+            destructureDelimiter: ',',
             serializationMethod: 'normal',
             throttledSaves: false
         });
+
+        this.db.loadDatabase('AriesWallet.db');
     }
 
     autoLoadCallback() {
-        let wallet = this.db.getCollection("wallets");
+        const wallet = this.db.getCollection('wallets');
         if (wallet === null) {
-            this.db.addCollection("wallets", {
-                unique: ['address']
+            this.db.addCollection('wallets', {
+                unique: ['address'],
+                indices: ['network'],
+                disableMeta: true,
+                autoupdate: true
             });
         }
+    }
+
+    autoSaveCallback() {
+        console.log('autosave called');
+    }
+
+    all(cb) {
+        const collection = this.db.getCollection('wallets').find({
+            network: Network.name
+        });
+
+        if (cb) {
+            return cb(collection);
+        }
+        return collection;
+    }
+
+    /**
+     *  Delete doc.
+     * @param doc
+     */
+    delete(doc) {
+        const result = this.db.getCollection('wallets').findAndRemove({
+            address: doc
+        });
+
+        this.db.saveDatabase('AriesWallet.db');
+        return result;
     }
 
     /**
@@ -56,32 +86,17 @@ class Database {
      * @returns {Object}
      */
     find(q) {
-        return this.db.getCollection("wallets").find(q);
-    }
-
-    /**
-     *  Get value from key.
-     * @param key
-     * @returns {Object|Array}
-     */
-    get(key) {
-        return this.db.getCollection("wallets").get(key, true);
+        return this.db.getCollection('wallets').find(q);
     }
 
     /**
      *  Save obj.
      * @param doc
      */
-    set(doc) {
-        return this.db.getCollection("wallets").insert(doc);
-    }
-
-    /**
-     *  Delete doc.
-     * @param doc
-     */
-    del(doc) {
-        return this.db.getCollection("wallets").findAndRemove({address: doc});
+    insert(doc) {
+        const result = this.db.getCollection('wallets').insert(doc);
+        this.db.saveDatabase('AriesWallet.db');
+        return result;
     }
 }
 

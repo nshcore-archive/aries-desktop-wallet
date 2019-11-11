@@ -1,29 +1,13 @@
-import Network from './Network';
 import EventEmitter from 'events';
+import Network from './Network';
 import Database from '../database/Database';
+
 const { LibraWallet, Mnemonic } = require('kulap-libra');
 
 class AriesWallet extends EventEmitter {
 
     static generate() {
         return new Mnemonic().toString();
-    }
-
-    static get store() {
-        if (!AriesWallet.__store) {
-            AriesWallet.__store = new Database();
-            AriesWallet.__store.autoLoadCallback();
-        }
-        return AriesWallet.__store;
-    }
-
-    static set store(value) {
-        AriesWallet.__store = value;
-    }
-
-    static all() {
-        let collection =  AriesWallet.store.find({ network: Network.name });
-        return collection.map(doc => new AriesWallet(doc));
     }
 
     static create(name, mnemonic) {
@@ -44,7 +28,6 @@ class AriesWallet extends EventEmitter {
 
     constructor(info) {
         super();
-        this.__store =  new Database();
         this.__name = info.name;
         this.__address = info.address;
         this.__network = info.network;
@@ -73,11 +56,13 @@ class AriesWallet extends EventEmitter {
     }
 
     save() {
-        return AriesWallet.store.set(this.toObject());
+        const db = new Database();
+        return db.insert(this.toObject());
     }
 
     erase() {
-        this.store.del({
+        const db = new Database();
+        db.remove({
             address: this.address
         });
 

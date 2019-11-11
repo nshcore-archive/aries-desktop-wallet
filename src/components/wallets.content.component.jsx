@@ -1,11 +1,18 @@
 import React from 'react';
+import {
+    Button,
+    Table,
+    Modal,
+    message,
+    Popconfirm
+} from 'antd';
+
 import Constants from '../lib/Constants';
 import AriesWallet from '../lib/AriesWallet';
 import Cryptography from '../lib/Cryptography';
 import CreateForm from './create.form.modal.component';
-import { Button, Table, Modal, message, Popconfirm } from 'antd';
-import Database from "../database/Database";
-import Network from "../lib/Network";
+import Database from '../database/Database';
+import Network from '../lib/Network';
 
 const validateFormHashed = (form) => {
     return new Promise((res, rej) => {
@@ -40,33 +47,31 @@ class WalletsContent extends React.Component {
     }
 
     componentDidMount() {
-        let x = AriesWallet.all();
+        const db = new Database();
+        db.autoLoadCallback();
 
-    // .then((wallets) => {
-    //         console.log('pre fe');
-    //         wallets.forEach((w) => {
-    //             console.log('loading wallet');
-    //             console.log(w);
-    //             w.on(AriesWallet.Events.Updated, () => {
-    //                 // const newTotal = this.state.wallets.reduce((a, c) => a + c.coins, 0);
-    //                 this.setState({ total: newTotal });
-    //             });
-    //             w.update();
-    //         });
-    //
-    //         this.setState({ wallets: wallets });
-    //
-    //     }, (e) => {
-    //         console.log(e);
-    //         message.error('Could not load wallets from database');
-    //     });
+        const wallets = db.all((collection) => collection.map((doc) => new AriesWallet(doc)));
+        console.log('pre fe');
+        wallets.forEach((w) => {
+            console.log('loading wallet');
+            console.log(w);
+            // w.on(AriesWallet.Events.Updated, () => {
+            //     // const newTotal = this.state.wallets.reduce((a, c) => a + c.coins, 0);
+            //     this.setState({ total: newTotal });
+            // });
+            // w.update();
+        });
+
+        this.setState({ wallets: wallets });
     }
 
     handleCreate() {
         validateFormHashed(this.form).then((values) => {
             this.form.resetFields();
             this.setState({ modalOpenCreate: false });
+
             const wallet = AriesWallet.create(values.name, AriesWallet.generate());
+
             this.__addWallet(wallet, wallet.account.mnemonic);
         });
     }
@@ -85,37 +90,43 @@ class WalletsContent extends React.Component {
             wallets: this.state.wallets.concat([wallet]),
         });
 
-        wallet.save().then(() => {
+        const db = new Database();
+        db.autoLoadCallback();
+        const result = db.insert(wallet.toObject());
 
+        if (result.address === wallet.address) {
             message.success(Constants.Messages.Wallet.Created);
-
             setTimeout(() => {
                 Modal.warning({
                     title: Constants.Messages.Wallet.Mnemonic,
                     content: mnemonic,
                 });
             }, 1000);
-        }, (e) => {
+        } else {
             Modal.error({
                 title: Constants.Messages.Wallet.Failed,
-                content: e.toString(),
+                content: 'can/\'t save',
             });
-        });
+        }
     }
 
     handleReload() {
-        this.state.wallets.forEach(w => w.update());
+        this.state.wallets.forEach(w => console.log(w));
     }
 
     render() {
 
         const columns = [
             { title: 'Name', dataIndex: 'name', key: 'name' },
-            { title: 'Address', key: 'address', render: (r) => {
+            {
+                title: 'Address', key: 'address', render: (r) => {
                     return (
-                        <span tabIndex={0}
-                              role="button"
-                              style={{ cursor: 'copy' }}>{r.address}</span>
+                        <span
+                          tabIndex={0}
+                          role="button"
+                          style={{ cursor: 'copy' }}>
+                            {r.address}
+                        </span>
                     );
                 }
             },
