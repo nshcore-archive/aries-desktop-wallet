@@ -1,0 +1,6 @@
+{
+  "testRegex": "((\\.|/*.)(spec))\\.js?$",
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>src/jest.setup.js"
+  }
+}

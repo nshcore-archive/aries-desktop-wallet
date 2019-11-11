@@ -1,0 +1,960 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter snapshot renders 1`] = `
+<div
+  className="Wallets"
+>
+  <div
+    className="Wallets"
+  >
+    <div
+      style={
+        Object {
+          "marginBottom": "12px",
+        }
+      }
+    >
+      <button
+        className="ant-btn ant-btn-primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginLeft": "8px",
+          }
+        }
+        type="button"
+      >
+        <i
+          aria-label="icon: plus-circle-o"
+          className="anticon anticon-plus-circle-o"
+        >
+          <svg
+            aria-hidden="true"
+            className=""
+            data-icon="plus-circle"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
+            />
+            <path
+              d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+            />
+          </svg>
+        </i>
+        <span>
+          Create
+        </span>
+      </button>
+      <button
+        className="ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginLeft": "8px",
+          }
+        }
+        type="button"
+      >
+        <i
+          aria-label="icon: reload"
+          className="anticon anticon-reload"
+        >
+          <svg
+            aria-hidden="true"
+            className=""
+            data-icon="reload"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M909.1 209.3l-56.4 44.1C775.8 155.1 656.2 92 521.9 92 290 92 102.3 279.5 102 511.5 101.7 743.7 289.8 932 521.9 932c181.3 0 335.8-115 394.6-276.1 1.5-4.2-.7-8.9-4.9-10.3l-56.7-19.5a8 8 0 0 0-10.1 4.8c-1.8 5-3.8 10-5.9 14.9-17.3 41-42.1 77.8-73.7 109.4A344.77 344.77 0 0 1 655.9 829c-42.3 17.9-87.4 27-133.8 27-46.5 0-91.5-9.1-133.8-27A341.5 341.5 0 0 1 279 755.2a342.16 342.16 0 0 1-73.7-109.4c-17.9-42.4-27-87.4-27-133.9s9.1-91.5 27-133.9c17.3-41 42.1-77.8 73.7-109.4 31.6-31.6 68.4-56.4 109.3-73.8 42.3-17.9 87.4-27 133.8-27 46.5 0 91.5 9.1 133.8 27a341.5 341.5 0 0 1 109.3 73.8c9.9 9.9 19.2 20.4 27.8 31.4l-60.2 47a8 8 0 0 0 3 14.1l175.6 43c5 1.2 9.9-2.6 9.9-7.7l.8-180.9c-.1-6.6-7.8-10.3-13-6.2z"
+            />
+          </svg>
+        </i>
+      </button>
+    </div>
+    <div
+      className="ant-table-wrapper"
+      style={
+        Object {
+          "backgroundColor": "white",
+          "height": "250px",
+        }
+      }
+    >
+      <div
+        className="ant-spin-nested-loading"
+      >
+        <div
+          className="ant-spin-container"
+        >
+          <div
+            className="ant-table ant-table-default ant-table-empty ant-table-scroll-position-left"
+            style={Object {}}
+          >
+            <div
+              className="ant-table-content"
+            >
+              <div
+                className="ant-table-body"
+                onScroll={[Function]}
+                onWheel={[Function]}
+                style={Object {}}
+              >
+                <table
+                  className=""
+                  style={Object {}}
+                >
+                  <colgroup>
+                    <col
+                      style={
+                        Object {
+                          "minWidth": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    />
+                    <col
+                      style={
+                        Object {
+                          "minWidth": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    />
+                  </colgroup>
+                  <thead
+                    className="ant-table-thead"
+                  >
+                    <tr
+                      style={
+                        Object {
+                          "height": null,
+                        }
+                      }
+                    >
+                      <th
+                        className=""
+                      >
+                        <span
+                          className="ant-table-header-column"
+                        >
+                          <div>
+                            <span
+                              className="ant-table-column-title"
+                            >
+                              Name
+                            </span>
+                            <span
+                              className="ant-table-column-sorter"
+                            />
+                          </div>
+                        </span>
+                      </th>
+                      <th
+                        className=""
+                      >
+                        <span
+                          className="ant-table-header-column"
+                        >
+                          <div>
+                            <span
+                              className="ant-table-column-title"
+                            >
+                              Address
+                            </span>
+                            <span
+                              className="ant-table-column-sorter"
+                            />
+                          </div>
+                        </span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    className="ant-table-tbody"
+                  />
+                </table>
+              </div>
+              <div
+                className="ant-table-placeholder"
+              >
+                <div
+                  className="ant-empty ant-empty-normal"
+                >
+                  <div
+                    className="ant-empty-image"
+                  >
+                    <svg
+                      height="41"
+                      viewBox="0 0 64 41"
+                      width="64"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                        transform="translate(0 1)"
+                      >
+                        <ellipse
+                          cx="32"
+                          cy="33"
+                          fill="#F5F5F5"
+                          rx="32"
+                          ry="7"
+                        />
+                        <g
+                          fillRule="nonzero"
+                          stroke="#D9D9D9"
+                        >
+                          <path
+                            d="M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z"
+                          />
+                          <path
+                            d="M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z"
+                            fill="#FAFAFA"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <p
+                    className="ant-empty-description"
+                  >
+                    No Data
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletContent Test snapshot renders 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WalletsContent />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="Wallets"
+      >
+        <div
+          style={
+            Object {
+              "marginBottom": "12px",
+            }
+          }
+        >
+          <Button
+            block={false}
+            ghost={false}
+            htmlType="button"
+            icon="plus-circle-o"
+            loading={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "marginLeft": "8px",
+              }
+            }
+            type="primary"
+          >
+            Create
+          </Button>
+          <Button
+            block={false}
+            ghost={false}
+            htmlType="button"
+            icon="reload"
+            loading={false}
+            onClick={[Function]}
+            shape="circle"
+            style={
+              Object {
+                "marginLeft": "8px",
+              }
+            }
+            type="primary"
+          />
+        </div>
+        <Modal
+          confirmLoading={false}
+          maskTransitionName="fade"
+          okText="Create"
+          okType="primary"
+          onCancel={[Function]}
+          onOk={[Function]}
+          title="Create a New Wallet"
+          transitionName="zoom"
+          visible={false}
+          width={520}
+        >
+          <Form(CreateForm)
+            handleCreate={[Function]}
+          />
+        </Modal>
+        <withStore(Table)
+          columns={
+            Array [
+              Object {
+                "dataIndex": "name",
+                "key": "name",
+                "title": "Name",
+              },
+              Object {
+                "key": "address",
+                "render": [Function],
+                "title": "Address",
+              },
+            ]
+          }
+          dataSource={Array []}
+          pagination={false}
+          style={
+            Object {
+              "backgroundColor": "white",
+              "height": "250px",
+            }
+          }
+        />
+      </div>,
+      "className": "Wallets",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            style={
+              Object {
+                "marginBottom": "12px",
+              }
+            }
+          >
+            <Button
+              block={false}
+              ghost={false}
+              htmlType="button"
+              icon="plus-circle-o"
+              loading={false}
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "8px",
+                }
+              }
+              type="primary"
+            >
+              Create
+            </Button>
+            <Button
+              block={false}
+              ghost={false}
+              htmlType="button"
+              icon="reload"
+              loading={false}
+              onClick={[Function]}
+              shape="circle"
+              style={
+                Object {
+                  "marginLeft": "8px",
+                }
+              }
+              type="primary"
+            />
+          </div>,
+          <Modal
+            confirmLoading={false}
+            maskTransitionName="fade"
+            okText="Create"
+            okType="primary"
+            onCancel={[Function]}
+            onOk={[Function]}
+            title="Create a New Wallet"
+            transitionName="zoom"
+            visible={false}
+            width={520}
+          >
+            <Form(CreateForm)
+              handleCreate={[Function]}
+            />
+          </Modal>,
+          <withStore(Table)
+            columns={
+              Array [
+                Object {
+                  "dataIndex": "name",
+                  "key": "name",
+                  "title": "Name",
+                },
+                Object {
+                  "key": "address",
+                  "render": [Function],
+                  "title": "Address",
+                },
+              ]
+            }
+            dataSource={Array []}
+            pagination={false}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "height": "250px",
+              }
+            }
+          />,
+        ],
+        "className": "Wallets",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Button
+                block={false}
+                ghost={false}
+                htmlType="button"
+                icon="plus-circle-o"
+                loading={false}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginLeft": "8px",
+                  }
+                }
+                type="primary"
+              >
+                Create
+              </Button>,
+              <Button
+                block={false}
+                ghost={false}
+                htmlType="button"
+                icon="reload"
+                loading={false}
+                onClick={[Function]}
+                shape="circle"
+                style={
+                  Object {
+                    "marginLeft": "8px",
+                  }
+                }
+                type="primary"
+              />,
+            ],
+            "style": Object {
+              "marginBottom": "12px",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "block": false,
+                "children": "Create",
+                "ghost": false,
+                "htmlType": "button",
+                "icon": "plus-circle-o",
+                "loading": false,
+                "onClick": [Function],
+                "style": Object {
+                  "marginLeft": "8px",
+                },
+                "type": "primary",
+              },
+              "ref": null,
+              "rendered": "Create",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "block": false,
+                "ghost": false,
+                "htmlType": "button",
+                "icon": "reload",
+                "loading": false,
+                "onClick": [Function],
+                "shape": "circle",
+                "style": Object {
+                  "marginLeft": "8px",
+                },
+                "type": "primary",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Form(CreateForm)
+              handleCreate={[Function]}
+            />,
+            "confirmLoading": false,
+            "maskTransitionName": "fade",
+            "okText": "Create",
+            "okType": "primary",
+            "onCancel": [Function],
+            "onOk": [Function],
+            "title": "Create a New Wallet",
+            "transitionName": "zoom",
+            "visible": false,
+            "width": 520,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "handleCreate": [Function],
+            },
+            "ref": [Function],
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "columns": Array [
+              Object {
+                "dataIndex": "name",
+                "key": "name",
+                "title": "Name",
+              },
+              Object {
+                "key": "address",
+                "render": [Function],
+                "title": "Address",
+              },
+            ],
+            "dataSource": Array [],
+            "pagination": false,
+            "style": Object {
+              "backgroundColor": "white",
+              "height": "250px",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="Wallets"
+        >
+          <div
+            style={
+              Object {
+                "marginBottom": "12px",
+              }
+            }
+          >
+            <Button
+              block={false}
+              ghost={false}
+              htmlType="button"
+              icon="plus-circle-o"
+              loading={false}
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "8px",
+                }
+              }
+              type="primary"
+            >
+              Create
+            </Button>
+            <Button
+              block={false}
+              ghost={false}
+              htmlType="button"
+              icon="reload"
+              loading={false}
+              onClick={[Function]}
+              shape="circle"
+              style={
+                Object {
+                  "marginLeft": "8px",
+                }
+              }
+              type="primary"
+            />
+          </div>
+          <Modal
+            confirmLoading={false}
+            maskTransitionName="fade"
+            okText="Create"
+            okType="primary"
+            onCancel={[Function]}
+            onOk={[Function]}
+            title="Create a New Wallet"
+            transitionName="zoom"
+            visible={false}
+            width={520}
+          >
+            <Form(CreateForm)
+              handleCreate={[Function]}
+            />
+          </Modal>
+          <withStore(Table)
+            columns={
+              Array [
+                Object {
+                  "dataIndex": "name",
+                  "key": "name",
+                  "title": "Name",
+                },
+                Object {
+                  "key": "address",
+                  "render": [Function],
+                  "title": "Address",
+                },
+              ]
+            }
+            dataSource={Array []}
+            pagination={false}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "height": "250px",
+              }
+            }
+          />
+        </div>,
+        "className": "Wallets",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              style={
+                Object {
+                  "marginBottom": "12px",
+                }
+              }
+            >
+              <Button
+                block={false}
+                ghost={false}
+                htmlType="button"
+                icon="plus-circle-o"
+                loading={false}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginLeft": "8px",
+                  }
+                }
+                type="primary"
+              >
+                Create
+              </Button>
+              <Button
+                block={false}
+                ghost={false}
+                htmlType="button"
+                icon="reload"
+                loading={false}
+                onClick={[Function]}
+                shape="circle"
+                style={
+                  Object {
+                    "marginLeft": "8px",
+                  }
+                }
+                type="primary"
+              />
+            </div>,
+            <Modal
+              confirmLoading={false}
+              maskTransitionName="fade"
+              okText="Create"
+              okType="primary"
+              onCancel={[Function]}
+              onOk={[Function]}
+              title="Create a New Wallet"
+              transitionName="zoom"
+              visible={false}
+              width={520}
+            >
+              <Form(CreateForm)
+                handleCreate={[Function]}
+              />
+            </Modal>,
+            <withStore(Table)
+              columns={
+                Array [
+                  Object {
+                    "dataIndex": "name",
+                    "key": "name",
+                    "title": "Name",
+                  },
+                  Object {
+                    "key": "address",
+                    "render": [Function],
+                    "title": "Address",
+                  },
+                ]
+              }
+              dataSource={Array []}
+              pagination={false}
+              style={
+                Object {
+                  "backgroundColor": "white",
+                  "height": "250px",
+                }
+              }
+            />,
+          ],
+          "className": "Wallets",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Button
+                  block={false}
+                  ghost={false}
+                  htmlType="button"
+                  icon="plus-circle-o"
+                  loading={false}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "marginLeft": "8px",
+                    }
+                  }
+                  type="primary"
+                >
+                  Create
+                </Button>,
+                <Button
+                  block={false}
+                  ghost={false}
+                  htmlType="button"
+                  icon="reload"
+                  loading={false}
+                  onClick={[Function]}
+                  shape="circle"
+                  style={
+                    Object {
+                      "marginLeft": "8px",
+                    }
+                  }
+                  type="primary"
+                />,
+              ],
+              "style": Object {
+                "marginBottom": "12px",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "block": false,
+                  "children": "Create",
+                  "ghost": false,
+                  "htmlType": "button",
+                  "icon": "plus-circle-o",
+                  "loading": false,
+                  "onClick": [Function],
+                  "style": Object {
+                    "marginLeft": "8px",
+                  },
+                  "type": "primary",
+                },
+                "ref": null,
+                "rendered": "Create",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "block": false,
+                  "ghost": false,
+                  "htmlType": "button",
+                  "icon": "reload",
+                  "loading": false,
+                  "onClick": [Function],
+                  "shape": "circle",
+                  "style": Object {
+                    "marginLeft": "8px",
+                  },
+                  "type": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Form(CreateForm)
+                handleCreate={[Function]}
+              />,
+              "confirmLoading": false,
+              "maskTransitionName": "fade",
+              "okText": "Create",
+              "okType": "primary",
+              "onCancel": [Function],
+              "onOk": [Function],
+              "title": "Create a New Wallet",
+              "transitionName": "zoom",
+              "visible": false,
+              "width": 520,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "handleCreate": [Function],
+              },
+              "ref": [Function],
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "columns": Array [
+                Object {
+                  "dataIndex": "name",
+                  "key": "name",
+                  "title": "Name",
+                },
+                Object {
+                  "key": "address",
+                  "render": [Function],
+                  "title": "Address",
+                },
+              ],
+              "dataSource": Array [],
+              "pagination": false,
+              "style": Object {
+                "backgroundColor": "white",
+                "height": "250px",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    Symbol(enzyme.__providerValues__): undefined,
+  },
+  Symbol(enzyme.__providerValues__): Map {},
+  Symbol(enzyme.__childContext__): null,
+}
+`;
