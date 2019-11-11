@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  platform:
+    image: debian:latest
+    tty: true
+    container_name: libra-blockchain
+    command: bash -c ""apt update && apt install -y git && apt install -y curl && apt install -y build-essential && apt install -y wget && wget https://github.com/Kitware/CMake/releases/download/v3.14.5/cmake-3.14.5.tar.gz && tar xzf cmake-3.14.5.tar.gz && cd cmake-3.14.5 && ./configure --prefix=/opt/cmake && make && make install && mkdir /usr/local/share/cmake-3.14 && cp -r /opt/cmake/share/cmake-3.14/* /usr/local/share/cmake-3.14/ && curl -O https://dl.google.com/go/go1.10.2.linux-amd64.tar.gz && tar xvf go1.10.2.linux-amd64.tar.gz && mv go /usr/local && apt install -y autoconf libtool && git clone https://github.com/protocolbuffers/protobuf.git && cd protobuf && git submodule update --init --recursive && ./autogen.sh && ./configure && make && make check && make install && ldconfig && git clone https://github.com/libra/libra.git && cd libra && yes | ./scripts/dev_setup.sh
