@@ -1,0 +1,8 @@
+{
+  "presets": ["env", "react", "jest"],
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-runtime",
+    "transform-async-to-generator"
+  ]
+}

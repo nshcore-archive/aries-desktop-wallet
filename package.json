@@ -6,11 +6,12 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
+    "forge:start": "electron-forge start",
+    "forge:package": "electron-forge package",
+    "forge:make": "electron-forge make",
+    "test:jest": "jest --env=node --config ./jest.config.json --detectOpenHandles",
     "publish": "electron-forge publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --cache --color --ext .jsx,.js src"
   },
   "config": {
     "forge": {
@@ -46,25 +47,34 @@
   },
   "dependencies": {
     "antd": "^3.25.0",
-    "axios": "^0.19.0",
-    "electron-compile": "^6.4.4",
-    "electron-devtools-installer": "^2.2.4",
-    "electron-squirrel-startup": "^1.0.0",
+    "electron": "^7.1.1",
+    "kulap-libra": "^2.0.4",
+    "lokijs": "^1.5.8",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-hot-loader": "^4.12.16"
+    "react-dom": "^16.11.0"
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-es2015-classes": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-jest": "23.2.0",
     "babel-preset-react": "^6.24.1",
-    "electron-forge": "^5.2.4",
+    "electron-compile": "^6.4.4",
+    "electron-devtools-installer": "^2.1.0",
+    "electron-forge": "^5.1.0",
     "electron-prebuilt-compile": "4.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.16.0"
+    "eslint-plugin-react": "^7.16.0",
+    "jest": "23.6.0",
+    "react-hot-loader": "^4.12.16",
+    "react-test-renderer": "^16.11.0"
   }
 }

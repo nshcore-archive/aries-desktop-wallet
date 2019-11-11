@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tabs, Icon, Layout } from 'antd';
+import WalletsContent from './components/wallets.content.component';
 const { Header, Footer, Content } = Layout;
 
 class App extends React.Component {
@@ -14,7 +15,7 @@ class App extends React.Component {
                     <div className="App">
                         <Tabs defaultActiveKey="1" style={{ padding: '16px' }}>
                             <Tabs.TabPane tab={<span><Icon type="wallet" />Wallet</span>} key="1">
-                                Wallet Tab
+                                <WalletsContent />
                             </Tabs.TabPane>
                             <Tabs.TabPane tab={<span><Icon type="credit-card" />Payments</span>} key="2">
                                 Payment Tab
